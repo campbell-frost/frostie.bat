@@ -4,7 +4,7 @@
       <h1 class="blink-text">FROSTIE.BAT</h1>
     </v-col-md-2>
     <v-col-md-8 class="z">
-      <marquee scrollamount="100" class="marquee">{{ selectedRandomMessage }}</marquee>
+      <marquee scrollamount="100" class="marquee blink-text">{{ selectedRandomMessage }}</marquee>
     </v-col-md-8>
     <v-col-md-2>
       <h1 class="blink-text text-center frostie">FROSTIE.BAT</h1>
@@ -52,6 +52,9 @@ export default {
       {
         image: "https://www.icegif.com/wp-content/uploads/2023/02/icegif-1690.gif"
       },
+      {
+        image: "https://media.discordapp.net/attachments/1152105994831265852/1152113628749774848/7z7orp.gif?ex=660f8bee&is=65fd16ee&hm=293f35c84882536b2dea9a2ad8c6d80b3c34d965a742cf158a34c037d1329052&=&width=390&height=693"
+      }
     ]);
 
     const messages = ref([
