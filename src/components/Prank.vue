@@ -1,13 +1,13 @@
 <template>
-  <v-row class="d-flex justify-center">
+  <v-row class="d-flex justify-center " style="height: 0px;">
     <v-col-md-2 class="frostie">
-      <h1 class="blink_text">FROSTIE.BAT</h1>
+      <h1 class="blink-text">FROSTIE.BAT</h1>
     </v-col-md-2>
-    <v-col-md-8>
+    <v-col-md-8 class="z">
       <marquee scrollamount="100" class="marquee">{{ selectedRandomMessage }}</marquee>
     </v-col-md-8>
-    <v-col-md-2 >
-      <h1 class="blink_text text-center frostie">FROSTIE.BAT</h1>
+    <v-col-md-2>
+      <h1 class="blink-text text-center frostie">FROSTIE.BAT</h1>
     </v-col-md-2>
   </v-row>
   <v-row>
@@ -16,7 +16,7 @@
     </v-col>
   </v-row>
   <v-row class="no-margin">
-    <v-col v-for="(banner, index) in shuffledBanners" :key="index" class="no-margin">
+    <v-col style="max-height: 20px" v-for="(banner, index) in shuffledBanners" :key="index" class="no-margin">
       <img class="no-margin banner-image" :src="banner.src">
     </v-col>
   </v-row>
@@ -43,6 +43,15 @@ export default {
       {
         image: "https://media.discordapp.net/attachments/1120491072783667251/1165737684371787906/Tumblr_l_18254161065274.gif?ex=6609bd52&is=65f74852&hm=00ee9f6d942007d41ce3862cb85c746d1b65a6db8f689cb0ea3b7481d22347bc&"
       },
+      {
+        image: "https://media1.tenor.com/m/ydDMqtC9kZEAAAAC/keanu-reeves.gif"
+      },
+      {
+        image: "https://media.discordapp.net/attachments/793312588800589864/835570139936194652/image0-15.gif?ex=66084dd5&is=65f5d8d5&hm=8d3d7cd68dda6bbd3f1b2a483d3f5e1c14e84c2a5c83ee00a328f91e7ff3c3b8&"
+      },
+      {
+        image: "https://www.icegif.com/wp-content/uploads/2023/02/icegif-1690.gif"
+      },
     ]);
 
     const messages = ref([
@@ -56,7 +65,7 @@ export default {
         message: "SUCKER SUCKER SUCKER"
       },
       {
-        message: "FROSTIE STRIKES AGAIN"
+        message: "GOTCHA GOTCHA GOTCHA"
       },
     ]);
 
@@ -180,6 +189,10 @@ export default {
   font-size: 100px;
   color: red;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+.z{
+  z-index: 20;
 }
 
 .frostie {
@@ -190,14 +203,15 @@ export default {
 
 .image {
   width: 100%;
-  height: 79vh;
+  height: 94vh;
 }
 
-.blink_text {
+.blink-text {
   animation: 1s blinker linear infinite;
   -webkit-animation: 1s blinker linear infinite;
   -moz-animation: 1s blinker linear infinite;
   color: red;
+  font-weight: bolder;
 }
 
 .banner-image{
