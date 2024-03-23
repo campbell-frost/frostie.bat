@@ -1,18 +1,23 @@
 <template>
-  <v-row>
-    <v-col-md-3 class="frostie">
+  <v-row class="d-flex justify-center">
+    <v-col-md-2 class="frostie">
       <h1 class="blink_text">FROSTIE.BAT</h1>
-    </v-col-md-3>
-    <v-col-md-6>
+    </v-col-md-2>
+    <v-col-md-8>
       <marquee scrollamount="100" class="marquee">{{ selectedRandomMessage }}</marquee>
-    </v-col-md-6>
-    <v-col-md-3>
-      <h1 class="blink_text text-end frostie">FROSTIE.BAT</h1>
-    </v-col-md-3>
+    </v-col-md-8>
+    <v-col-md-2 >
+      <h1 class="blink_text text-center frostie">FROSTIE.BAT</h1>
+    </v-col-md-2>
   </v-row>
   <v-row>
-    <v-col class="d-flex justify-center">
+    <v-col class="d-flex justify-center no-margin">
       <img class="text-center image" :src="selectedImage">
+    </v-col>
+  </v-row>
+  <v-row class="no-margin">
+    <v-col v-for="(banner, index) in shuffledBanners" :key="index" class="no-margin">
+      <img class="no-margin banner-image" :src="banner.src">
     </v-col>
   </v-row>
 </template>
@@ -55,8 +60,69 @@ export default {
       },
     ]);
 
+    const banners = ref([
+      {
+        src: "https://www.webdesignmuseum.org/uploaded/exhibitions/web-banners-in-the-90s/at-t-the-first-banner-1994.png"
+      },
+      {
+        src: "https://www.webdesignmuseum.org/uploaded/exhibitions/web-banners-in-the-90s/windows-95-1996.gif"
+      },
+      {
+        src: "https://www.webdesignmuseum.org/uploaded/exhibitions/web-banners-in-the-90s/internet-explorer-3-0-1996.gif"
+      },
+      {
+        src: "https://www.webdesignmuseum.org/uploaded/exhibitions/web-banners-in-the-90s/ncaa-march-madness-1999.gif"
+      },
+      {
+        src: "https://www.webdesignmuseum.org/uploaded/exhibitions/web-banners-in-the-90s/macromedia-flash-3-1998.gif"
+      },
+      {
+        src: "https://www.webdesignmuseum.org/uploaded/exhibitions/web-banners-in-the-90s/microsoft-1999.gif"
+      },
+      {
+        src: "https://www.webdesignmuseum.org/uploaded/exhibitions/web-banners-in-the-90s/coolsavings-1999.gif"
+      },
+      {
+        src: "https://www.webdesignmuseum.org/uploaded/exhibitions/web-banners-in-the-90s/msn-1999.jpg"
+      },
+      {
+        src: "https://www.webdesignmuseum.org/uploaded/exhibitions/web-banners-in-the-90s/volkswagen-2000.gif"
+      },
+      {
+        src: "https://www.webdesignmuseum.org/uploaded/exhibitions/web-banners-in-the-90s/hp-shopping-2000.gif"
+      },
+      {
+        src: "https://www.webdesignmuseum.org/uploaded/exhibitions/web-banners-in-the-90s/ebay-2000.gif"
+      },
+      {
+        src: "https://www.webdesignmuseum.org/uploaded/exhibitions/web-banners-in-the-90s/hotmail-2000.gif"
+      },
+      {
+        src: "https://www.webdesignmuseum.org/uploaded/exhibitions/web-banners-in-the-90s/amazon-2000.gif"
+      },
+      {
+        src: "https://www.webdesignmuseum.org/uploaded/exhibitions/web-banners-in-the-90s/altavista-2000.gif"
+      },
+      {
+        src: "https://www.webdesignmuseum.org/uploaded/exhibitions/web-banners-in-the-90s/elle-2000.gif"
+      },
+      {
+        src: "https://www.webdesignmuseum.org/uploaded/exhibitions/web-banners-in-the-90s/buy-com-2000.gif"
+      },
+      {
+        src: "https://www.webdesignmuseum.org/uploaded/exhibitions/web-banners-in-the-90s/netscape-netcenter-personal-finance-1999.gif"
+      },
+      {
+        src: "https://www.webdesignmuseum.org/uploaded/exhibitions/web-banners-in-the-90s/lowest-fare-1999.gif"
+      },
+      {
+        src: "https://www.webdesignmuseum.org/uploaded/exhibitions/web-banners-in-the-90s/mac-mall-1998.gif"
+      },
+    ]);
+
     const selectedImage = ref('');
     const selectedRandomMessage = ref('');
+    const shuffledBanners = ref([]);
 
     const selectRandomImage = () => {
       const randomIndex = Math.floor(Math.random() * images.value.length);
@@ -68,22 +134,48 @@ export default {
       selectedRandomMessage.value = messages.value[randomIndex].message;
     };
 
+    const shuffleArray = (array) => {
+      const shuffled = array.slice();
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return shuffled;
+    };
+
+    const selectRandomBanners = () => {
+      shuffledBanners.value = shuffleArray(banners.value).slice(0, 3);
+    };
+
     onMounted(() => {
       selectRandomImage();
       selectRandomMessage();
+      selectRandomBanners();
     });
 
     return {
       selectedImage,
       selectRandomImage,
       selectedRandomMessage,
-      selectRandomMessage
+      selectRandomMessage,
+      shuffledBanners
     };
   },
 };
 </script>
 
 <style>
+.no-margin {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
 .marquee {
   font-size: 100px;
   color: red;
@@ -106,6 +198,10 @@ export default {
   -webkit-animation: 1s blinker linear infinite;
   -moz-animation: 1s blinker linear infinite;
   color: red;
+}
+
+.banner-image{
+  width: 100%;
 }
 
 @-moz-keyframes blinker {
