@@ -30,9 +30,11 @@ import { ref, onMounted } from 'vue';
 export default {
   setup() {
     const images = ref([
+
       {
-        image: "https://media.discordapp.net/attachments/1152105994831265852/1152113628749774848/7z7orp.gif?ex=660f8bee&is=65fd16ee&hm=293f35c84882536b2dea9a2ad8c6d80b3c34d965a742cf158a34c037d1329052&=&width=390&height=693"
+        image: "https://www.icegif.com/wp-content/uploads/2023/02/icegif-1690.gif"
       },
+      
     ]);
 
     const messages = ref([
