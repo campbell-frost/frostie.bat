@@ -31,53 +31,16 @@ export default {
   setup() {
     const images = ref([
       {
-        image: "https://i.etsystatic.com/5175241/r/il/ed217b/996818704/il_fullxfull.996818704_3vau.jpg",
-      },
-      {
-        image: "https://media.tenor.com/HUz1LwDn_lAAAAAM/smile.gif"
-      },
-      {
-        image: "https://media0.giphy.com/media/xT9KVHs6I3EfDKnVte/giphy.gif"
-      },
-      {
-        image: "https://media.discordapp.net/attachments/236654120826699778/1163606388199665745/ezgif-2-7ab121e013.gif?ex=660b36e5&is=65f8c1e5&hm=629565f87b37f03e56ba8c0a0844bc53ff147c55f36fb8cc1d3422d91186ba87&"
-      },
-      {
-        image: "https://media.discordapp.net/attachments/1120491072783667251/1165737684371787906/Tumblr_l_18254161065274.gif?ex=6609bd52&is=65f74852&hm=00ee9f6d942007d41ce3862cb85c746d1b65a6db8f689cb0ea3b7481d22347bc&"
-      },
-      {
-        image: "https://media1.tenor.com/m/ydDMqtC9kZEAAAAC/keanu-reeves.gif"
-      },
-      {
-        image: "https://media.discordapp.net/attachments/793312588800589864/835570139936194652/image0-15.gif?ex=66084dd5&is=65f5d8d5&hm=8d3d7cd68dda6bbd3f1b2a483d3f5e1c14e84c2a5c83ee00a328f91e7ff3c3b8&"
-      },
-      {
-        image: "https://www.icegif.com/wp-content/uploads/2023/02/icegif-1690.gif"
-      },
-      {
         image: "https://media.discordapp.net/attachments/1152105994831265852/1152113628749774848/7z7orp.gif?ex=660f8bee&is=65fd16ee&hm=293f35c84882536b2dea9a2ad8c6d80b3c34d965a742cf158a34c037d1329052&=&width=390&height=693"
       },
-      {
-        image: "https://image.emojipng.com/985/12350985.jpg"
-      }
     ]);
 
     const messages = ref([
-      {
-        message: "YOU'VE BEEN PRANKED"
-      },
-      {
-        message: "FROSTIE STRIKES AGAIN"
-      },
+
       {
         message: "YOU'VE BEEN FROSTIED"
       },
-      {
-        message: "SUCKER SUCKER SUCKER"
-      },
-      {
-        message: "GOTCHA GOTCHA GOTCHA"
-      },
+
     ]);
 
     const banners = ref([
