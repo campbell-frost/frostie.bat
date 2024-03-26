@@ -56,8 +56,9 @@ export default {
         image: "https://media.discordapp.net/attachments/1152105994831265852/1152113628749774848/7z7orp.gif?ex=660f8bee&is=65fd16ee&hm=293f35c84882536b2dea9a2ad8c6d80b3c34d965a742cf158a34c037d1329052&=&width=390&height=693"
       }, 
       {
-        image: "https://media1.tenor.com/m/m7a3S0kXMIUAAAAd/logan-mewing.gif"
+        image: "https://media.tenor.com/UMEz2XNUFzYAAAAM/shoebill-bird.gif"
       }
+      
     ]);
 
     const messages = ref([
