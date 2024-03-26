@@ -15,7 +15,7 @@
       <img class="text-center image1" :src="selectedImage">
       <img class="image2 move"
         src="https://cdnb.artstation.com/p/assets/images/images/052/295/993/original/william-jacob-esqueleto-run-gif.gif?1659446940"
-        style="animation: cubic-bezier(1,.51,1,1) move 5s infinite; z-index: 1">
+        style="animation: cubic-bezier(1,1,.66,.66) move 5s infinite; z-index: 1">
     </v-col>
   </v-row>
   <v-row class="no-margin height: -10px;">
