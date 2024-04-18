@@ -41,24 +41,17 @@ export default {
         image: "https://media1.tenor.com/m/AR7rr3bIbQwAAAAC/luigi-jumpscare.gif"
       },
       {
-        image: "https://media.discordapp.net/attachments/1120491072783667251/1165737684371787906/Tumblr_l_18254161065274.gif?ex=6609bd52&is=65f74852&hm=00ee9f6d942007d41ce3862cb85c746d1b65a6db8f689cb0ea3b7481d22347bc&"
-      },
-      {
         image: "https://media1.tenor.com/m/ydDMqtC9kZEAAAAC/keanu-reeves.gif"
       },
-      {
-        image: "https://media.discordapp.net/attachments/793312588800589864/835570139936194652/image0-15.gif?ex=66084dd5&is=65f5d8d5&hm=8d3d7cd68dda6bbd3f1b2a483d3f5e1c14e84c2a5c83ee00a328f91e7ff3c3b8&"
-      },
+
       {
         image: "https://www.icegif.com/wp-content/uploads/2023/02/icegif-1690.gif"
       },
-      {
-        image: "https://media.discordapp.net/attachments/1152105994831265852/1152113628749774848/7z7orp.gif?ex=660f8bee&is=65fd16ee&hm=293f35c84882536b2dea9a2ad8c6d80b3c34d965a742cf158a34c037d1329052&=&width=390&height=693"
-      },
+
       {
         image: "https://media.tenor.com/UMEz2XNUFzYAAAAM/shoebill-bird.gif"
       }
-      
+
     ]);
 
     const messages = ref([
@@ -198,7 +191,8 @@ export default {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
 }
-.z{
+
+.z {
   z-index: 20;
 }
 
@@ -221,7 +215,7 @@ export default {
   font-weight: bolder;
 }
 
-.banner-image{
+.banner-image {
   width: 100%;
 }
 
