@@ -4,12 +4,19 @@
       <h1 class="blink-text">FROSTIE.BAT</h1>
     </v-col-md-2>
     <v-col-md-8 class="z">
-      <marquee scrollamount="100" class="marquee">{{ selectedRandomMessage }}</marquee>
+      <marquee scrollamount="100" class="marquee">
+        {{ selectedRandomMessage }}
+      </marquee>
+      <h1 class="align-center red blink-text">
+        {{ pc }}
+
+      </h1>
     </v-col-md-8>
     <v-col-md-2 class="z">
       <h1 class="blink-text text-center frostie z">FROSTIE.BAT</h1>
     </v-col-md-2>
   </v-row>
+
   <v-row>
     <v-col class="d-flex justify-center no-margin">
       <img class="text-center image1" :src="selectedImage">
@@ -29,6 +36,9 @@
 import { ref, onMounted } from 'vue';
 export default {
   setup() {
+    const pc = 'I am inside your PC :)'
+    const date = new Date().getDate();
+
     const images = ref([
       {
         image: "https://i.etsystatic.com/5175241/r/il/ed217b/996818704/il_fullxfull.996818704_3vau.jpg",
@@ -53,20 +63,20 @@ export default {
 
     const messages = ref([
       {
-        message: "YOU'VE BEEN PRANKED"
+        message: `Good Morning Amy!`
       },
-      {
-        message: "FROSTIE STRIKES AGAIN"
-      },
-      {
-        message: "YOU'VE BEEN FROSTIED"
-      },
-      {
-        message: "SUCKER SUCKER SUCKER"
-      },
-      {
-        message: "GOTCHA GOTCHA GOTCHA"
-      },
+      // {
+      //   message: "FROSTIE STRIKES AGAIN"
+      // },
+      // {
+      //   message: "YOU'VE BEEN FROSTIED"
+      // },
+      // {
+      //   message: "SUCKER SUCKER SUCKER"
+      // },
+      // {
+      //   message: "GOTCHA GOTCHA GOTCHA"
+      // },
     ]);
 
     const banners = ref([
@@ -131,7 +141,6 @@ export default {
     const mailSound = ref(null);
     const audioSrc = "./public/yougotmail.mp3";
 
-
     const selectedImage = ref('');
     const selectedRandomMessage = ref('');
     const shuffledBanners = ref([]);
@@ -174,7 +183,8 @@ export default {
       selectedRandomMessage,
       selectRandomMessage,
       shuffledBanners,
-      mailSound
+      mailSound,
+      pc,
     };
   },
 };
@@ -196,7 +206,12 @@ export default {
   font-size: 100px;
   color: red;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 
+.red{
+  color: red;
+  margin-top: 300px;
+  font-size: 100px;
 }
 
 .z {
