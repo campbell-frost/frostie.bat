@@ -41,24 +41,28 @@ export default {
 
     const images = ref([
       {
-        image: "https://i.etsystatic.com/5175241/r/il/ed217b/996818704/il_fullxfull.996818704_3vau.jpg",
-      },
-      {
-        image: "https://media.tenor.com/HUz1LwDn_lAAAAAM/smile.gif"
-      },
-      {
-        image: "https://media0.giphy.com/media/xT9KVHs6I3EfDKnVte/giphy.gif"
-      },
-      {
-        image: "https://media1.tenor.com/m/ydDMqtC9kZEAAAAC/keanu-reeves.gif"
-      },
-      {
-        image: "https://www.icegif.com/wp-content/uploads/2023/02/icegif-1690.gif"
-      },
-
-      {
-        image: "https://image.emojipng.com/985/12350985.jpg"
+        image: 'https://pouch.jumpshare.com/preview/AVgYbxEsXo4hVpiO0qmrgjLhWS5apzenbIcGsMQLswI204r8aVNooBNiKTBLnOJAKCIAoomIlUt0Pnids_pG2ec2FxZU1y6fV7HK6wdDD2U'
       }
+      // {
+      //   image: "https://i.etsystatic.com/5175241/r/il/ed217b/996818704/il_fullxfull.996818704_3vau.jpg",
+      // },
+      // {
+      //   image: "https://media.tenor.com/HUz1LwDn_lAAAAAM/smile.gif"
+      // },
+      // {
+      //   image: "https://media0.giphy.com/media/xT9KVHs6I3EfDKnVte/giphy.gif"
+      // },
+      // {
+      //   image: "https://media1.tenor.com/m/ydDMqtC9kZEAAAAC/keanu-reeves.gif"
+      // },
+      // {
+      //   image: "https://www.icegif.com/wp-content/uploads/2023/02/icegif-1690.gif"
+      // },
+
+      // {
+      //   image: "https://image.emojipng.com/985/12350985.jpg"
+      // },
+
     ]);
 
     const messages = ref([
