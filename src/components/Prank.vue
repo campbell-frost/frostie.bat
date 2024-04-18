@@ -38,7 +38,7 @@ export default {
         image: "https://media0.giphy.com/media/xT9KVHs6I3EfDKnVte/giphy.gif"
       },
       {
-        image: "https://media.discordapp.net/attachments/236654120826699778/1163606388199665745/ezgif-2-7ab121e013.gif?ex=660b36e5&is=65f8c1e5&hm=629565f87b37f03e56ba8c0a0844bc53ff147c55f36fb8cc1d3422d91186ba87&"
+        image: "https://media1.tenor.com/m/AR7rr3bIbQwAAAAC/luigi-jumpscare.gif"
       },
       {
         image: "https://media.discordapp.net/attachments/1120491072783667251/1165737684371787906/Tumblr_l_18254161065274.gif?ex=6609bd52&is=65f74852&hm=00ee9f6d942007d41ce3862cb85c746d1b65a6db8f689cb0ea3b7481d22347bc&"
@@ -54,7 +54,7 @@ export default {
       },
       {
         image: "https://media.discordapp.net/attachments/1152105994831265852/1152113628749774848/7z7orp.gif?ex=660f8bee&is=65fd16ee&hm=293f35c84882536b2dea9a2ad8c6d80b3c34d965a742cf158a34c037d1329052&=&width=390&height=693"
-      }, 
+      },
       {
         image: "https://media.tenor.com/UMEz2XNUFzYAAAAM/shoebill-bird.gif"
       }
