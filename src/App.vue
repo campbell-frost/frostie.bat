@@ -1,9 +1,8 @@
 <template>
   <v-app>
     <v-main>
-      <Prank />
+      <Frostie />
     </v-main>
-
   </v-app>
 </template>
 
