@@ -76,8 +76,6 @@ export default {
       {
         image: '../../src/assets/ezgif-2-7ab121e013.gif'
       },
-
-
     ]);
 
     const messages = ref([
@@ -164,12 +162,12 @@ export default {
     const selectedRandomMessage = ref('');
     const shuffledBanners = ref([]);
 
-    const selectRandomImage = () => {
+    const selectRandomImage = async () => {
       const randomIndex = Math.floor(Math.random() * images.value.length);
       selectedImage.value = images.value[randomIndex].image;
     };
 
-    const selectRandomMessage = () => {
+    const selectRandomMessage = async () => {
       const randomIndex = Math.floor(Math.random() * messages.value.length);
       selectedRandomMessage.value = messages.value[randomIndex].message;
     };
@@ -183,14 +181,14 @@ export default {
       return shuffled;
     };
 
-    const selectRandomBanners = () => {
+    const selectRandomBanners = async () => {
       shuffledBanners.value = shuffleArray(banners.value).slice(0, 3);
     };
 
-    onMounted(() => {
-      selectRandomImage();
-      selectRandomMessage();
-      selectRandomBanners();
+    onMounted( async () => {
+      await selectRandomImage();
+      await selectRandomMessage();
+      await selectRandomBanners();
 
       mailSound.value = new Audio(audioSrc);
       mailSound.value.play();
