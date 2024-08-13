@@ -40,42 +40,45 @@ import { ref, onMounted } from 'vue';
 const pc = 'I am inside your PC :)';
 
 const images = ref([
+  // {
+  //   image: '../../src/assets/me.gif'
+  // },
+  // {
+  //   image: "https://i.etsystatic.com/5175241/r/il/ed217b/996818704/il_fullxfull.996818704_3vau.jpg",
+  // },
+  // {
+  //   image: "https://media.tenor.com/HUz1LwDn_lAAAAAM/smile.gif"
+  // },
+  // {
+  //   image: "https://media0.giphy.com/media/xT9KVHs6I3EfDKnVte/giphy.gif"
+  // },
+  // {
+  //   image: "https://media1.tenor.com/m/ydDMqtC9kZEAAAAC/keanu-reeves.gif"
+  // },
+  // {
+  //   image: "https://www.icegif.com/wp-content/uploads/2023/02/icegif-1690.gif"
+  // },
+  // {
+  //   image: "https://image.emojipng.com/985/12350985.jpg"
+  // },
+  // {
+  //   image: '../../src/assets/trollface-horror.gif'
+  // },
+  // {
+  //   image: '../../src/assets/Tumblr_l_18254161065274.gif'
+  // },
+  // {
+  //   image: '../../src/assets/maltigi-scary.gif'
+  // },
+  // {
+  //   image: '../../src/assets/image0-15.gif'
+  // },
+  // {
+  //   image: '../../src/assets/ezgif-2-7ab121e013.gif'
+  // },
   {
-    image: '../../src/assets/me.gif'
-  },
-  {
-    image: "https://i.etsystatic.com/5175241/r/il/ed217b/996818704/il_fullxfull.996818704_3vau.jpg",
-  },
-  {
-    image: "https://media.tenor.com/HUz1LwDn_lAAAAAM/smile.gif"
-  },
-  {
-    image: "https://media0.giphy.com/media/xT9KVHs6I3EfDKnVte/giphy.gif"
-  },
-  {
-    image: "https://media1.tenor.com/m/ydDMqtC9kZEAAAAC/keanu-reeves.gif"
-  },
-  {
-    image: "https://www.icegif.com/wp-content/uploads/2023/02/icegif-1690.gif"
-  },
-  {
-    image: "https://image.emojipng.com/985/12350985.jpg"
-  },
-  {
-    image: '../../src/assets/trollface-horror.gif'
-  },
-  {
-    image: '../../src/assets/Tumblr_l_18254161065274.gif'
-  },
-  {
-    image: '../../src/assets/maltigi-scary.gif'
-  },
-  {
-    image: '../../src/assets/image0-15.gif'
-  },
-  {
-    image: '../../src/assets/ezgif-2-7ab121e013.gif'
-  },
+    image: '../../src/assets/paul.jpg'
+  }
 ]);
 
 const messages = ref([
