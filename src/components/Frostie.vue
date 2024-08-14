@@ -26,6 +26,7 @@
       <img class="image2 move"
         src="https://cdnb.artstation.com/p/assets/images/images/052/295/993/original/william-jacob-esqueleto-run-gif.gif?1659446940"
         style="animation: cubic-bezier(1,.51,1,1) move 5s infinite; z-index: 1">
+        <img class="movePaul image2" :src="paul2" alt="Paul">
     </v-col>
   </v-row>
   <v-row class="no-margin height: -10px;">
@@ -38,6 +39,8 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 const pc = 'I am inside your PC :)';
+
+const paul2 = ref('./images/paul2.jpg')
 
 const images = ref([
   // {
@@ -170,7 +173,7 @@ const updateCurrentDay = async () => {
   setInterval(() => {
     const currentDate = new Date();
     const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-    
+
     const currentTime = currentDate.getTime();
     const currentDayOfWeek = daysOfWeek[currentDate.getDay() - 1];
     time.value = convertTime(currentTime);
@@ -287,6 +290,25 @@ onMounted(async () => {
   to {
     left: 70%;
     transform: scale(3.5);
+  }
+}
+
+.movePaul {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  width: 500px;
+  height: 1500px;
+  animation: moveInCircle 5s linear infinite;
+  z-index: 20D;
+}
+
+@keyframes moveInCircle {
+  from {
+    transform: rotate(0deg) translateX(100px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(100px) rotate(-360deg);
   }
 }
 
