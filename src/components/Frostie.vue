@@ -300,7 +300,7 @@ onMounted(async () => {
   width: 500px;
   height: 1500px;
   animation: moveInCircle 5s linear infinite;
-  z-index: 20D;
+  z-index: 20;
 }
 
 @keyframes moveInCircle {
