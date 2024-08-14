@@ -77,7 +77,7 @@ const images = ref([
   //   image: '../../src/assets/ezgif-2-7ab121e013.gif'
   // },
   {
-    image: '../../src/assets/paul.jpg'
+    image: './paul.jpg'
   }
 ]);
 
